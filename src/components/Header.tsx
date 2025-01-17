@@ -2,9 +2,9 @@ import Link from "next/link";
 
 function Header() {
 	return (
-		<header className="flex justify-between items-center p-8 shadow-md">
+		<header className="flex justify-between items-center p-7 shadow-md">
 			<div className="pl-10">
-				<p className="text-xl font-bold">Tr3ble</p>
+				<p className="text-2xl font-bold">Tr3ble</p>
 			</div>
 			<div className="flex space-x-4 pr-10">
 				<Link href="/" className="text-xl font-bold hover:text-purple-600 transition-colors duration-500">
