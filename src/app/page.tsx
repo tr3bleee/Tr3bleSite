@@ -16,7 +16,7 @@ export default function Home() {
 					</h2>
 					{/* icons telegram and github */}
 					<div className="flex space-x-4 mt-5">
-						<a href="https://github.com/tr3ble" target="_blank" rel="noopener noreferrer" className="text-4xl">
+						<a href="https://github.com/y9tr3ble" target="_blank" rel="noopener noreferrer" className="text-4xl">
 							<FaGithub />
 						</a>
 						<a href="https://t.me/tr3ble" target="_blank" rel="noopener noreferrer" className="text-4xl">
