@@ -1,5 +1,5 @@
 import Image from "next/image";
-import img from "/Users/tr3ble/dev/tr3blesite/public/images/catabout.png";
+import img from "../../public/images/catabout.png";
 
 export const CatAboutImage = () => {
   return <div>
