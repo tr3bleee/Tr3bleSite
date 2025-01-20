@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Header />
       <div>
-        <div className="flex flex-col ml-10 md:ml-20 mt-44">
+        <div className="flex flex-col ml-10 md:ml-48 mt-44">
           <div className="gap-12">
 					<h1 className="text-5xl font-bold md:text-6xl">
 						Hi, <br /> I am <span className="text-purple-600">
