@@ -3,7 +3,7 @@ import MobileMenu from "./MobileMenu"
 
 function Header() {
   return (
-    <header className="flex justify-between items-center p-7 shadow-md">
+    <header className="flex justify-between items-center p-5 shadow-md">
       <div className="pl-4 lg:pl-10">
         <p className="text-2xl font-bold">Tr3ble</p>
       </div>
