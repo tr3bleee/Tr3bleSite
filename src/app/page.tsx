@@ -11,7 +11,7 @@ export default function Home() {
       <div>
         <div className="flex flex-col ml-12 md:ml-28 mt-44">
           <div className="gap-12">
-					<h1 className="text-6xl font-bold">
+					<h1 className="text-5xl font-bold lg:text-6xl">
 						Hi, <br /> I am <span className="text-purple-600">
 							<TypeAnimation
 								sequence={[
