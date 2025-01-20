@@ -1,5 +1,8 @@
+"use client"
+
 import Header from "@/components/Header";
 import { FaTelegram, FaGithub } from "react-icons/fa";
+import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
 	return (
@@ -9,7 +12,18 @@ export default function Home() {
         <div className="flex flex-col ml-28 mt-44">
           <div className="gap-12">
 					<h1 className="text-6xl font-bold">
-						Hi, <br /> I am <span className="text-purple-600">Tr3ble</span>
+						Hi, <br /> I am <span className="text-purple-600">
+							<TypeAnimation
+								sequence={[
+									"Tr3ble",
+									1000
+								]}
+								repeat={Infinity}
+								wrapper="span"
+								speed={1}
+								style={{ display: "inline-block" }}
+							/>
+						</span>
 					</h1>
 					<h2 className="text-2xl font-bold">
 						I am a Full-Stack Developer
