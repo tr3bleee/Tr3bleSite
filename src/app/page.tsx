@@ -9,24 +9,32 @@ export default function Home() {
     <>
       <Header />
       <div>
-        <div className="flex flex-col ml-12 md:ml-28 mt-44">
+        <div className="flex flex-col ml-10 md:ml-20 mt-44">
           <div className="gap-12">
-					<h1 className="text-5xl font-bold lg:text-6xl">
+					<h1 className="text-5xl font-bold md:text-6xl">
 						Hi, <br /> I am <span className="text-purple-600">
-							<TypeAnimation
-								sequence={[
-									"Tr3ble",
-									1000
-								]}
-								repeat={Infinity}
-								wrapper="span"
-								speed={1}
-								style={{ display: "inline-block" }}
-							/>
+							Tr3ble
 						</span>
 					</h1>
 					<h2 className="text-2xl font-bold">
-						I am a Full-Stack Developer
+						<TypeAnimation 
+							sequence={[
+								"i am a Full-Stack Developer",
+								1000,
+								"i am a JavaScript Developer",
+								1000,
+								"and TypeScript also",
+								1000,
+								"i write code :3",
+								1000,
+								"love building things <3",
+								1000,
+							]}
+							repeat={Infinity}
+							wrapper="span"
+							speed={1}
+							style={{ display: "inline-block" }}
+						/>
 					</h2>
 					{/* icons telegram and github */}
 					<div className="flex space-x-4 mt-5">
