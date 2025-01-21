@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
 
 // const jetbrainsMono = JetBrains_Mono({
@@ -7,8 +7,8 @@ import "./globals.css";
 //   subsets: ["latin"],
 // });
 
-const inter = Inter({
-  variable: "--font-inter",
+const firaCode = Fira_Code({
+  variable: "--font-fira-code",
   subsets: ["latin"],
 });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${firaCode.variable} antialiased`}
       >
         {children}
       </body>
