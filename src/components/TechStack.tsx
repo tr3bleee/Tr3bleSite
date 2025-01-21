@@ -26,7 +26,7 @@ function TechStack() {
 						<SiJavascript size={30} />
 					</TooltipTrigger>
 					<TooltipContent>
-						<p>JavaScript</p>
+						<p className="font-semibold">JavaScript</p>
 					</TooltipContent>
 				</Tooltip>
 				<Tooltip>
@@ -34,7 +34,7 @@ function TechStack() {
 						<SiTypescript size={30} />
 					</TooltipTrigger>
 					<TooltipContent>
-						<p>TypeScript</p>
+						<p className="font-semibold">TypeScript</p>
 					</TooltipContent>
 				</Tooltip>
 				<Tooltip>
@@ -42,7 +42,7 @@ function TechStack() {
 						<SiReact size={30} />
 					</TooltipTrigger>
 					<TooltipContent>
-						<p>React</p>
+						<p className="font-semibold">React</p>
 					</TooltipContent>
 				</Tooltip>
 				<Tooltip>
@@ -50,7 +50,7 @@ function TechStack() {
 						<SiNextdotjs size={30} />
 					</TooltipTrigger>
 					<TooltipContent>
-						<p>Next.js</p>
+						<p className="font-semibold">Next.js</p>
 					</TooltipContent>
 				</Tooltip>
 				<Tooltip>
@@ -58,7 +58,7 @@ function TechStack() {
 						<SiTailwindcss size={30} />
 					</TooltipTrigger>
 					<TooltipContent>
-						<p>TailwindCSS</p>
+						<p className="font-semibold">TailwindCSS</p>
 					</TooltipContent>
 				</Tooltip>
 				<Tooltip>
@@ -66,7 +66,7 @@ function TechStack() {
 						<SiExpress size={30} />
 					</TooltipTrigger>
 					<TooltipContent>
-						<p>Express</p>
+						<p className="font-semibold">Express</p>
 					</TooltipContent>
 				</Tooltip>
 				<Tooltip>
@@ -74,7 +74,7 @@ function TechStack() {
 						<SiPrisma size={30} />
 					</TooltipTrigger>
 					<TooltipContent>
-						<p>Prisma</p>
+						<p className="font-semibold">Prisma</p>
 					</TooltipContent>
 				</Tooltip>
 			</TooltipProvider>
