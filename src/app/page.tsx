@@ -4,12 +4,13 @@ import Header from "@/components/Header";
 import { FaTelegram, FaGithub } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import ThemeToogle from "@/components/ThemeToogle";
+import Footer from "@/components/Footer";
 
 export default function Home() {
 	return (
     <>
       <Header />
-      <div>
+      <main className="flex min-h-screen">
         <div className="flex flex-col ml-10 md:ml-48 mt-44">
           <div className="gap-12">
 					<h1 className="text-5xl font-bold md:text-6xl">
@@ -49,7 +50,8 @@ export default function Home() {
 				</div>
 			</div>
 			<ThemeToogle />
-		</div>
+		</main>
+		<Footer />
     </>
 	);
 }
