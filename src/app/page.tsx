@@ -3,6 +3,7 @@
 import Header from "@/components/Header";
 import { FaTelegram, FaGithub } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
+import ThemeToogle from "@/components/ThemeToogle";
 
 export default function Home() {
 	return (
@@ -47,6 +48,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
+			<ThemeToogle />
 		</div>
     </>
 	);

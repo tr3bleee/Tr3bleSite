@@ -8,27 +8,25 @@ import "../globals.css";
 // });
 
 const firaCode = Fira_Code({
-  variable: "--font-fira-code",
-  subsets: ["latin"],
+	variable: "--font-fira-code",
+	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Nikita Tr3ble",
-  description: "Bio of Nikita Tr3ble",
+	title: "Nikita Tr3ble",
+	description: "Bio of Nikita Tr3ble",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${firaCode.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body className={`${firaCode.variable} antialiased`}>
+				{children}
+			</body>
+		</html>
+	);
 }

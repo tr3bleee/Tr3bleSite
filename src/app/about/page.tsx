@@ -1,7 +1,7 @@
 import { CatAboutImage } from "@/components/CatAboutImage";
 import Header from "@/components/Header";
 import TechStack from "@/components/TechStack";
-
+import ThemeToogle from "@/components/ThemeToogle";
 export default function About() {
 	return (
 		<>
@@ -27,6 +27,7 @@ export default function About() {
 						</div>
 					</div>
 				</div>
+				<ThemeToogle />
 			</div>
 		</>
 	);
