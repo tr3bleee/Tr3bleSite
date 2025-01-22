@@ -22,7 +22,7 @@ export default function About() {
 							applications. I am currently delving deeper into front-end
 							frameworks (e.g., React) and architectural patterns.
 						</p>
-						<div className="mt-10 w-full flex">
+						<div className="mt-10 w-full flex justify-center">
 							<TechStack />
 						</div>
 					</div>
