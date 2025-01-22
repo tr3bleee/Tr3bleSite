@@ -23,33 +23,33 @@ const MobileMenu = () => {
         ☰
       </button>
       {isOpen && (
-        <div className="absolute top-16 right-0 w-full bg-white shadow-md dark:bg-black transition-colors duration-300">
+        <div className="absolute top-16 right-0 w-full shadow-md transition-colors duration-300">
           <nav className="flex flex-col items-center py-4">
             <Link 
               href="/" 
               onClick={toggleMenu}
-              className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-900 transition-colors duration-300 text-black dark:text-white"
+              className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-800 transition-colors duration-300 text-black dark:text-white"
             >
               Home
             </Link>
             <Link 
               href="/blog" 
               onClick={toggleMenu}
-              className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-900 transition-colors duration-300 text-black dark:text-white"
+              className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-800 transition-colors duration-300 text-black dark:text-white"
             >
               Blog
             </Link>
             <Link 
               href="/about" 
               onClick={toggleMenu}
-              className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-900 transition-colors duration-300 text-black dark:text-white"
+              className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-800 transition-colors duration-300 text-black dark:text-white"
             >
               About
             </Link>
             <Link 
               href="/skills" 
               onClick={toggleMenu}
-              className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-900 transition-colors duration-300 text-black dark:text-white"
+              className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-800 transition-colors duration-300 text-black dark:text-white"
             >
               Skills
             </Link>
