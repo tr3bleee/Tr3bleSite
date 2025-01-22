@@ -17,9 +17,6 @@ function Header() {
         <Link href="/about" className="text-xl font-semibold hover:text-purple-600 transition-colors duration-500">
           About
         </Link>
-        <Link href="/skills" className="text-xl font-semibold hover:text-purple-600 transition-colors duration-500">
-          Skills
-        </Link>
       </div>
       <MobileMenu />
     </header>
