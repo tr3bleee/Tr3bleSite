@@ -4,7 +4,9 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ThemeToogle from "@/components/ThemeToogle";
 import { useParams } from "next/navigation";
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 interface BlogPost {
 	title: string;
@@ -106,7 +108,28 @@ export default function BlogPost() {
 					<h1 className="text-4xl font-bold mb-4">{post.title}</h1>
 					<p className="text-gray-600 dark:text-gray-400 mb-8">{post.date}</p>
 					<div className="markdown-content">
-						<ReactMarkdown>{post.content}</ReactMarkdown>
+						<ReactMarkdown
+							components={{
+								code({ className, children, ...props }) {
+									const match = /language-(\w+)/.exec(className || "");
+									return match ? (
+										<SyntaxHighlighter
+											style={oneDark}
+											language={match[1]}
+											PreTag="div"
+										>
+											{String(children).replace(/\n$/, "")}
+										</SyntaxHighlighter>
+									) : (
+										<code className={className} {...props}>
+											{children}
+										</code>
+									);
+								},
+							}}
+						>
+							{post.content}
+						</ReactMarkdown>
 					</div>
 				</article>
 				<ThemeToogle />
