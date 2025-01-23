@@ -18,6 +18,18 @@ const posts: BlogPost[] = [
     date: "2024-03-20",
     description: "Welcome to my blog! This is my first post.",
     slug: "hello-world"
+  },
+  {
+    title: "Getting Started with TypeScript",
+    date: "2024-03-21",
+    description: "A beginner's guide to TypeScript and its powerful features.",
+    slug: "typescript-guide"
+  },
+  {
+    title: "Web Development Best Practices",
+    date: "2024-03-22",
+    description: "Essential tips and tricks for modern web development.",
+    slug: "web-dev-best-practices"
   }
 ];
 
