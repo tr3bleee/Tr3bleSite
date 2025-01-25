@@ -3,7 +3,7 @@ import {
 	SiReact,
 	SiNextdotjs,
 	SiTailwindcss,
-	SiExpress,
+	SiFastify,
 	SiPrisma,
 	SiJavascript,
 } from "react-icons/si";
@@ -63,10 +63,10 @@ function TechStack() {
 				</Tooltip>
 				<Tooltip>
 					<TooltipTrigger asChild>
-						<SiExpress size={30} />
+						<SiFastify size={30} />
 					</TooltipTrigger>
 					<TooltipContent>
-						<p className="font-semibold">Express</p>
+						<p className="font-semibold">Fastify</p>
 					</TooltipContent>
 				</Tooltip>
 				<Tooltip>
