@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+
 
 // const jetbrainsMono = JetBrains_Mono({
 //   variable: "--font-jetbrains-mono",
@@ -28,6 +31,8 @@ export default function RootLayout({
         className={`${firaCode.variable} antialiased`}
       >
         {children}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
