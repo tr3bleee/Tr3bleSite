@@ -22,40 +22,44 @@ const MobileMenu = () => {
       >
         ☰
       </button>
-      {isOpen && (
-        <div className="absolute top-16 right-0 w-full shadow-md transition-colors duration-300 bg-white dark:bg-black">
-          <nav className="flex flex-col items-center py-4">
-            <Link 
-              href="/" 
-              onClick={toggleMenu}
-              className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-800 transition-colors duration-300 text-black dark:text-white"
-            >
-              Home
-            </Link>
-            <Link 
-              href="/blog" 
-              onClick={toggleMenu}
-              className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-800 transition-colors duration-300 text-black dark:text-white"
-            >
-              Blog
-            </Link>
-            <Link 
-              href="/about" 
-              onClick={toggleMenu}
-              className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-800 transition-colors duration-300 text-black dark:text-white"
-            >
-              About
-            </Link>
-            <Link 
-              href="/skills" 
-              onClick={toggleMenu}
-              className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-800 transition-colors duration-300 text-black dark:text-white"
-            >
-              Skills
-            </Link>
-          </nav>
-        </div>
-      )}
+      <div 
+        className={`absolute top-16 right-0 w-full shadow-md transition-all duration-300 ease-in-out transform ${
+          isOpen 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 -translate-y-2 pointer-events-none'
+        } bg-white dark:bg-black`}
+      >
+        <nav className="flex flex-col items-center py-4">
+          <Link 
+            href="/" 
+            onClick={toggleMenu}
+            className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-800 transition-colors duration-300 text-black dark:text-white"
+          >
+            Home
+          </Link>
+          <Link 
+            href="/blog" 
+            onClick={toggleMenu}
+            className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-800 transition-colors duration-300 text-black dark:text-white"
+          >
+            Blog
+          </Link>
+          <Link 
+            href="/about" 
+            onClick={toggleMenu}
+            className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-800 transition-colors duration-300 text-black dark:text-white"
+          >
+            About
+          </Link>
+          <Link 
+            href="/skills" 
+            onClick={toggleMenu}
+            className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-800 transition-colors duration-300 text-black dark:text-white"
+          >
+            Skills
+          </Link>
+        </nav>
+      </div>
     </div>
   )
 }
