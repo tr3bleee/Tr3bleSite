@@ -51,13 +51,6 @@ const MobileMenu = () => {
           >
             About
           </Link>
-          <Link 
-            href="/skills" 
-            onClick={toggleMenu}
-            className="w-full text-center py-2 text-xl font-bold hover:bg-purple-100 dark:hover:bg-gray-800 transition-colors duration-300 text-black dark:text-white"
-          >
-            Skills
-          </Link>
         </nav>
       </div>
     </div>
