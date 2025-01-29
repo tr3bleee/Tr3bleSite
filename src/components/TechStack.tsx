@@ -6,6 +6,7 @@ import {
   SiFastify,
   SiPrisma,
   SiJavascript,
+  SiNestjs,
 } from "react-icons/si";
 import {
   Tooltip,
@@ -30,6 +31,7 @@ export default function TechStack() {
             { icon: SiNextdotjs, name: "Next.js" },
             { icon: SiTailwindcss, name: "Tailwind CSS" },
             { icon: SiFastify, name: "Fastify" },
+            { icon: SiNestjs, name: "NestJS"},
             { icon: SiPrisma, name: "Prisma" },
           ].map((tech, index) => (
             <Tooltip key={index}>
