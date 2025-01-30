@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen animate-fade-in flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between px-6 md:px-20 xl:px-32 pt-28">
+      <main className="flex min-h-screen animate-fade-in flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between px-6 md:px-20 xl:px-32 pt-36">
         {/* Left Column */}
         <div className="flex flex-col lg:max-w-[50%] mb-16 lg:mb-0">
           <h1 className="text-5xl font-bold md:text-6xl mt-10">
