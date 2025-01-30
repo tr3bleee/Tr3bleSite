@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen animate-fade-in flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between px-6 md:px-20 xl:px-32 pt-24">
+      <main className="flex min-h-screen animate-fade-in flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between px-6 md:px-20 xl:px-32 pt-28">
         {/* Left Column */}
         <div className="flex flex-col lg:max-w-[50%] mb-16 lg:mb-0">
-          <h1 className="text-5xl font-bold md:text-7xl">
+          <h1 className="text-5xl font-bold md:text-6xl mt-10">
             Hi, <br /> I am{" "}
             <span className="bg-gradient-to-r from-cyan-200 to-violet-600 bg-clip-text text-transparent">
               Tr3ble
