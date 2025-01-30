@@ -16,6 +16,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { FaJava } from "react-icons/fa";
 
 export default function TechStack() {
   return (
@@ -59,6 +60,7 @@ export default function TechStack() {
             {[
               { icon: SiPython, name: "Python" },
               { icon: SiKotlin, name: "Kotlin" },
+              { icon: FaJava, name: "Java" },
             ].map((tech, index) => (
               <Tooltip key={index}>
                 <TooltipTrigger asChild>
