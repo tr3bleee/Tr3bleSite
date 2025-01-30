@@ -1,14 +1,15 @@
-import { Metadata } from "next";
-import { Fira_Code } from "next/font/google";
+import type { Metadata } from "next";
+import { Geist } from "next/font/google";
+import "./globals.css";
 
-const firaCode = Fira_Code({
-  variable: "--font-fira-code",
+
+const geist = Geist({
+  variable: "--font-geist",
   subsets: ["latin"],
 });
 
-
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Nikita Tr3ble",
   description: "Blog of Nikita Tr3ble",
 };
 
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${firaCode.variable} antialiased`}
+        className={`${geist.variable} antialiased`}
       >
         {children}
       </body>

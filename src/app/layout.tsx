@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Fira_Code } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 
 
-// const jetbrainsMono = JetBrains_Mono({
-//   variable: "--font-jetbrains-mono",
-//   subsets: ["latin"],
-// });
-
-const firaCode = Fira_Code({
-  variable: "--font-fira-code",
+const geist = Geist({
+  variable: "--font-geist",
   subsets: ["latin"],
 });
 
@@ -28,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${firaCode.variable} antialiased`}
+        className={`${geist.variable} antialiased`}
       >
         {children}
         <SpeedInsights />
