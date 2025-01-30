@@ -11,16 +11,16 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen animate-fade-in flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between px-6 md:px-20 xl:px-32 pt-36">
+      <main className="flex min-h-screen animate-fade-in flex-col lg:flex-row items-start justify-center lg:justify-between px-2 sm:px-4 md:px-20 xl:px-32 pt-20 lg:pt-36">
         {/* Left Column */}
-        <div className="flex flex-col lg:max-w-[50%] mb-16 lg:mb-0">
-          <h1 className="text-5xl font-bold md:text-6xl mt-10">
+        <div className="flex flex-col w-full lg:max-w-[50%] mb-12 lg:mb-0 lg:mr-14">
+          <h1 className="text-3xl font-bold md:text-6xl lg:mt-10 ml-1 sm:ml-0">
             Hi, <br /> I am{" "}
             <span className="bg-gradient-to-r from-cyan-200 to-violet-600 bg-clip-text text-transparent">
               Tr3ble
             </span>
           </h1>
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-600 dark:text-gray-400 mt-4">
+          <h2 className="text-lg md:text-4xl font-bold text-gray-600 dark:text-gray-400 mt-4 ml-1 sm:ml-0">
             <TypeAnimation
               sequence={[
                 "i am a Full-Stack Developer",
@@ -37,10 +37,18 @@ export default function Home() {
               repeat={Infinity}
               wrapper="span"
               speed={1}
-              style={{ display: "inline-block" }}
+              style={{ 
+                display: "inline-block",
+                whiteSpace: "pre",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                width: "95vw",
+                lineHeight: "1.2em",
+                minHeight: "1.2em" 
+              }}
             />
           </h2>
-          <div className="flex space-x-4 mt-5">
+          <div className="flex space-x-4 mt-5 ml-1 sm:ml-0">
             <a
               href="https://github.com/y9tr3ble"
               target="_blank"
@@ -61,7 +69,7 @@ export default function Home() {
         </div>
 
         {/* Right Column */}
-        <div className="w-full lg:w-[45%]">
+        <div className="w-full lg:w-[45%] mt-8 lg:mt-0 min-h-[320px] -mr-3 sm:mr-0">
           <Terminal />
         </div>
       </main>
