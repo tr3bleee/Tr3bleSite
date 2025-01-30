@@ -37,7 +37,7 @@ export default function Blog() {
   return (
     <>
       <Header />
-      <main className="min-h-screen p-8 md:p-24">
+      <main className="min-h-screen p-8 md:p-24 animate-fade-in">
         <h1 className="text-4xl font-bold mb-8">Blog</h1>
         <div className="grid gap-6">
           {posts.map((post) => (
@@ -50,8 +50,8 @@ export default function Blog() {
             </article>
           ))}
         </div>
-        <ThemeToogle />
       </main>
+      <ThemeToogle />
       <Footer />
     </>
   );

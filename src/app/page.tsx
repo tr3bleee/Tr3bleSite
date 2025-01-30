@@ -10,7 +10,7 @@ export default function Home() {
 	return (
 		<>
 			<Header />
-			<main className="flex min-h-screen">
+			<main className="flex min-h-screen animate-fade-in">
 				<div className="flex flex-col ml-10 md:ml-48 mt-44">
 					<div className="gap-12">
 						<h1 className="text-5xl font-bold md:text-6xl">
@@ -57,8 +57,8 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<ThemeToogle />
 			</main>
+			<ThemeToogle />
 			<Footer />
 		</>
 	);
