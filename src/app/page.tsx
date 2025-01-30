@@ -14,7 +14,7 @@ export default function Home() {
 				<div className="flex flex-col ml-10 md:ml-48 mt-44">
 					<div className="gap-12">
 						<h1 className="text-5xl font-bold md:text-6xl">
-							Hi, <br /> I am <span className="text-purple-600">Tr3ble</span>
+							Hi, <br /> I am <span className="bg-gradient-to-r from-cyan-200 to-violet-600 bg-clip-text text-transparent">Tr3ble</span>
 						</h1>
 						<h2 className="text-2xl font-bold text-gray-600 dark:text-gray-400">
 							<TypeAnimation
