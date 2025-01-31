@@ -9,9 +9,9 @@ import Terminal from "@/components/terminal/terminal";
 
 export default function Home() {
   return (
-    <>
+    <div className="h-screen overflow-hidden flex flex-col">
       <Header />
-      <main className="flex min-h-screen animate-fade-in flex-col lg:flex-row items-start justify-center lg:justify-between px-2 sm:px-4 md:px-20 xl:px-32 pt-20 lg:pt-36">
+      <main className="flex-1 flex animate-fade-in flex-col lg:flex-row items-start justify-center lg:justify-between px-2 sm:px-4 md:px-20 xl:px-32 pt-20 lg:pt-36">
         {/* Left Column */}
         <div className="flex flex-col w-full lg:max-w-[50%] mb-12 lg:mb-0 lg:mr-14">
           <h1 className="text-3xl font-bold md:text-6xl lg:mt-10 ml-1 sm:ml-0">
@@ -69,12 +69,12 @@ export default function Home() {
         </div>
 
         {/* Right Column */}
-        <div className="w-full lg:w-[45%] mt-8 lg:mt-0 min-h-[320px] -mr-3 sm:mr-0">
+        <div className="w-full lg:w-[45%] mt-8 lg:mt-0 min-h-[320px] -mr-3 sm:mr-0 overflow-hidden">
           <Terminal />
         </div>
       </main>
       <ThemeToogle />
       <Footer />
-    </>
+    </div>
   );
 }
