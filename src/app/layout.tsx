@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import { ThemeProvider } from "next-themes";
 
 
 const geist = Geist({
@@ -22,12 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geist.variable} antialiased`}
-      >
-        {children}
-        <SpeedInsights />
-        <Analytics />
+      <body className={`${geist.variable} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system">
+          {children}
+          <SpeedInsights />
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );
