@@ -1,12 +1,8 @@
-import { useState, useEffect } from 'react';
 import Prism from 'prismjs';
 import "./prism-material-dark.css"
 import "prismjs/components/prism-typescript"
 
 const Terminal = () => {
-  const [displayedCode, setDisplayedCode] = useState('');
-  const [isTypingComplete, setIsTypingComplete] = useState(false);
-  
   const fullCode = `function aboutMe(): AboutMe {
   return {
     profile: {
@@ -21,24 +17,8 @@ const Terminal = () => {
   };
 }`;
 
-  useEffect(() => {
-    let currentIndex = 0;
-    
-    const typeCode = () => {
-      if (currentIndex <= fullCode.length) {
-        setDisplayedCode(fullCode.substring(0, currentIndex));
-        currentIndex++;
-        setTimeout(typeCode, Math.random() * 50 + 25);
-      } else {
-        setIsTypingComplete(true);
-      }
-    };
-
-    typeCode();
-  }, []);
-
   const highlightedCode = Prism.highlight(
-    displayedCode,
+    fullCode,
     Prism.languages.typescript,
     'typescript'
   );
@@ -58,13 +38,10 @@ const Terminal = () => {
         <div className="text-gray-800 dark:text-white mb-2">$ cat about-me.ts</div>
         <pre className="overflow-x-auto">
           <code
-            className="language-typescript invert dark:invert-0" // Инверсия для светлой темы
+            className="language-typescript invert dark:invert-0"
             dangerouslySetInnerHTML={{ __html: highlightedCode }}
           />
         </pre>
-        {!isTypingComplete && (
-          <span className="animate-pulse bg-gray-300 dark:bg-gray-600">▌</span>
-        )}
       </div>
     </div>
   );
