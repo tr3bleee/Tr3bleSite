@@ -53,7 +53,7 @@ export default function Home() {
               href="https://github.com/y9tr3ble"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-4xl hover:opacity-70 transition-opacity"
+              className="text-3xl md:text-4xl hover:opacity-70 transition-opacity"
             >
               <FaGithub />
             </a>
@@ -61,7 +61,7 @@ export default function Home() {
               href="https://t.me/tr3ble"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-4xl hover:opacity-70 transition-opacity"
+              className="text-3xl md:text-4xl hover:opacity-70 transition-opacity"
             >
               <FaTelegram />
             </a>
