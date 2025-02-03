@@ -16,7 +16,7 @@ export default function Home() {
         <div className="flex flex-col w-full lg:max-w-[50%] mb-12 lg:mb-0 lg:mr-14">
           <h1 className="text-3xl font-bold md:text-6xl lg:mt-10 ml-1 sm:ml-0">
             Hi, <br /> I am{" "}
-            <span className="bg-gradient-to-r from-cyan-200 to-violet-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-cyan-200 to-violet-600 bg-clip-text text-transparent">
               Tr3ble
             </span>
           </h1>

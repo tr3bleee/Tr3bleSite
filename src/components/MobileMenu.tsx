@@ -17,7 +17,7 @@ const MobileMenu = () => {
     <div className="md:hidden z-50">
       <button
         onClick={toggleMenu}
-        className="text-2xl font-bold focus:outline-none"
+        className="text-2xl font-bold focus:outline-hidden"
         aria-label="Toggle menu"
       >
         ☰
