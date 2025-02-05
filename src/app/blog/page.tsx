@@ -38,7 +38,14 @@ export default function Blog() {
     <>
       <Header />
       <main className="min-h-screen p-8 md:p-24 animate-fade-in">
-        <h1 className="text-4xl font-bold mb-8">Blog</h1>
+        <div className="flex justify-between items-center mb-12">
+          <h1 className="text-4xl font-bold">Blog</h1>
+        <Link href="/auth">
+          <button className="text-xl font-semibold hover:text-purple-600 border-4 rounded-3xl p-3 px-6 transition-colors duration-500">
+            Auth
+          </button>
+        </Link>
+        </div>
         <div className="grid gap-6">
           {posts.map((post) => (
             <article key={post.slug} className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-purple-500 dark:hover:border-purple-500 transition-colors">
