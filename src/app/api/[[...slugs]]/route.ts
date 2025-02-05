@@ -1,4 +1,4 @@
-import {app} from "@/app/api/[[...slugs]]/core";
+import {app} from "@/app/api/[[...slugs]]/swagger";
 
 const mainApp = app
     .get('/api', () => 'hi')
