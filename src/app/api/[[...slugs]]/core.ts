@@ -1,15 +1,10 @@
 import { Elysia } from 'elysia'
 import { swagger } from '@elysiajs/swagger'
 
-export const app = new Elysia()
-    .use(
-        swagger({
-            path: '/api/swagger',
-            documentation: {
-                info: {
-                    title: 'Tr3ble Documentation',
-                    version: '1.0.0'
-                }
-            }
-        })
-    )
+export const app = new Elysia({ prefix: '/api' })
+    .get('/', () => 'Hello Elysia')
+    .use(swagger({
+        documentation: {
+            servers: [{ url: '/api' }]
+        }
+    }))
