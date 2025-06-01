@@ -18,7 +18,7 @@ interface SkillTagProps {
 function SkillTag({icon, imageSrc, text}: SkillTagProps) {
     return (
         <div className="flex gap-2.5 items-center px-3.5 py-1.5 ring-2 rounded-xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-md hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[102%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500">
-            <div className="p-1.5 rounded-lg bg-neutral-100/80 dark:bg-neutral-800/50">
+            <div className="p-1.5 rounded-xl bg-neutral-100/80 dark:bg-neutral-800/50">
                 {icon && typeof icon === 'string' && <p className="font-zed-icons text-neutral-600 dark:text-neutral-300 text-[16px]">{icon}</p>}
                 {icon && typeof icon !== 'string' && (
                     <div className="text-neutral-600 dark:text-neutral-300 text-[16px]">
@@ -73,7 +73,7 @@ export default function AboutCard() {
             
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-neutral-100/60 dark:bg-neutral-800/40">
+                    <div className="p-2.5 rounded-xl bg-neutral-100/60 dark:bg-neutral-800/90">
                         <p className="font-zed text-neutral-500 dark:text-neutral-400 text-[13px]">{t.title}</p>
                     </div>
                     <div className="hidden sm:block h-4 w-[1px] bg-neutral-300 dark:bg-neutral-600"/>

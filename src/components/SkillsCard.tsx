@@ -25,12 +25,12 @@ function SkillItem({name, status, statusColor, icon: Icon, href}: SkillItemProps
         >
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-neutral-100/80 dark:bg-neutral-800/50 group-hover:bg-neutral-200/80 dark:group-hover:bg-neutral-700/60 transition-colors duration-300">
+                    <div className="p-2.5 rounded-2xl bg-neutral-100/80 dark:bg-neutral-800/50 group-hover:bg-neutral-200/80 dark:group-hover:bg-neutral-700/60 transition-colors duration-300">
                         <Icon className="text-neutral-600 dark:text-neutral-300 text-[20px] transition-transform group-hover:scale-110"/>
                     </div>
-                    <p className="font-raleway font-semibold text-neutral-700 dark:text-neutral-200">{name}</p>
+                    <p className="font-raleway font-semibold text-neutral-700 dark:text-neutral-200 leading-tight">{name}</p>
                 </div>
-                <div className="size-2 rounded-full" style={{backgroundColor: statusColor}}/>
+                <div className="size-2 rounded-full flex-shrink-0" style={{backgroundColor: statusColor}}/>
             </div>
         </Link>
     );
@@ -53,7 +53,7 @@ export default function SkillsCard() {
         >
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-neutral-100/60 dark:bg-neutral-800/40">
+                    <div className="p-2.5 rounded-2xl bg-neutral-100/60 dark:bg-neutral-800/90">
                         <p className="font-zed text-neutral-500 dark:text-neutral-400 text-[13px]">{t.title}</p>
                     </div>
                     <div className="hidden sm:block h-4 w-[1px] bg-neutral-300 dark:bg-neutral-600"/>
@@ -82,7 +82,7 @@ export default function SkillsCard() {
                            href="https://nestjs.com/"/>
                 <SkillItem name="React" status="" statusColor="#10b981" icon={SiReact}
                            href="https://react.dev/"/>
-                <SkillItem name="Tailwind CSS" status="" statusColor="#10b981" icon={SiTailwindcss}
+                <SkillItem name="Tailwind" status="" statusColor="#10b981" icon={SiTailwindcss}
                            href="https://tailwindcss.com/"/>
                 <SkillItem name="Docker" status="" statusColor="#10b981" icon={SiDocker}
                            href="https://www.docker.com/"/>
