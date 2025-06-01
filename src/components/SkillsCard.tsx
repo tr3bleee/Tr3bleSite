@@ -58,9 +58,9 @@ export default function SkillsCard() {
                     </div>
                     <div className="hidden sm:block h-4 w-[1px] bg-neutral-300 dark:bg-neutral-600"/>
                     <div className="hidden sm:flex items-center gap-1.5">
-                        <div className="size-1.5 rounded-full bg-emerald-400"/>
-                        <div className="size-1.5 rounded-full bg-yellow-400"/>
                         <div className="size-1.5 rounded-full bg-red-400"/>
+                        <div className="size-1.5 rounded-full bg-yellow-400"/>
+                        <div className="size-1.5 rounded-full bg-green-400"/>
                     </div>
                 </div>
                 <div className="text-neutral-400 dark:text-neutral-500 text-[11px] font-mono">
