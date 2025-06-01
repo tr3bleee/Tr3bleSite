@@ -5,9 +5,10 @@ import { useLanguage } from "@/lib/useLanguage";
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { IconType } from "react-icons";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaTelegram } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
+import { HiMoon, HiSun, HiGlobeAlt } from "react-icons/hi";
 
 interface SkillTagProps {
     icon?: string | IconType;
@@ -73,7 +74,7 @@ export default function AboutCard() {
             
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-neutral-100/60 dark:bg-neutral-800/90">
+                    <div className="p-2.5 rounded-xl bg-slate-200/50 dark:bg-neutral-800/90">
                         <p className="font-zed text-neutral-500 dark:text-neutral-400 text-[13px]">{t.title}</p>
                     </div>
                     <div className="hidden sm:block h-4 w-[1px] bg-neutral-300 dark:bg-neutral-600"/>
@@ -117,23 +118,30 @@ export default function AboutCard() {
             
             <div className="grid lg:flex gap-4 md:gap-4 w-full">
                 <button
-                    className="flex gap-4 items-center px-6 py-2 ring-2 rounded-xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-md hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[98%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
+                    className="flex gap-3 items-center px-6 py-2 ring-2 rounded-xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-md hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[98%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
                     onClick={() => window.open('https://t.me/tr3ble', '_blank')}
                 >
+                    <FaTelegram className="text-neutral-600 dark:text-neutral-300 text-lg" />
                     <p className="font-raleway font-medium text-neutral-600 dark:text-neutral-300">{t.contactMe}</p>
                 </button>
                 <button
-                    className="flex gap-4 items-center px-6 py-2 ring-2 rounded-xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-md hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[98%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
+                    className="flex gap-3 items-center px-6 py-2 ring-2 rounded-xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-md hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[98%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
                     onClick={() => window.toggleTheme()}
                 >
+                    {theme === 'dark' ? (
+                        <HiSun className="text-neutral-600 dark:text-neutral-300 text-lg" />
+                    ) : (
+                        <HiMoon className="text-neutral-600 dark:text-neutral-300 text-lg" />
+                    )}
                     <p className="font-raleway font-medium text-neutral-600 dark:text-neutral-300">
                         {theme === 'dark' ? t.lightTheme : t.darkTheme}
                     </p>
                 </button>
                 <button
                     onClick={toggleLanguage}
-                    className="flex gap-4 items-center px-6 py-2 ring-2 rounded-xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-md hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[98%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
+                    className="flex gap-3 items-center px-6 py-2 ring-2 rounded-xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-md hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[98%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
                 >
+                    <HiGlobeAlt className="text-neutral-600 dark:text-neutral-300 text-lg" />
                     <p className="font-raleway font-medium text-neutral-600 dark:text-neutral-300">{language === 'en' ? 'RU' : 'EN'}</p>
                 </button>
             </div>

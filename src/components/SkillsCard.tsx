@@ -53,7 +53,7 @@ export default function SkillsCard() {
         >
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-2xl bg-neutral-100/60 dark:bg-neutral-800/90">
+                    <div className="p-2.5 rounded-2xl bg-slate-200/50 dark:bg-neutral-800/90">
                         <p className="font-zed text-neutral-500 dark:text-neutral-400 text-[13px]">{t.title}</p>
                     </div>
                     <div className="hidden sm:block h-4 w-[1px] bg-neutral-300 dark:bg-neutral-600"/>
