@@ -6,9 +6,9 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { IconType } from "react-icons";
 import { FaReact, FaTelegram } from "react-icons/fa";
+import { HiGlobeAlt, HiMoon, HiSun } from "react-icons/hi";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
-import { HiMoon, HiSun, HiGlobeAlt } from "react-icons/hi";
 
 interface SkillTagProps {
     icon?: string | IconType;
@@ -84,8 +84,30 @@ export default function AboutCard() {
                         <div className="size-1.5 rounded-full bg-green-400"/>
                     </div>
                 </div>
-                <div className="text-neutral-400 dark:text-neutral-500 text-[11px] font-mono">
-                    online
+                <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
+                        <button
+                            className="p-1.5 rounded-lg bg-neutral-100/60 dark:bg-neutral-800/60 hover:bg-neutral-200/80 dark:hover:bg-neutral-700/80 transition-all duration-200 ease-out hover:scale-105"
+                            onClick={() => window.toggleTheme()}
+                            title={theme === 'dark' ? t.lightTheme : t.darkTheme}
+                        >
+                            {theme === 'dark' ? (
+                                <HiSun className="text-neutral-600 dark:text-neutral-300 text-sm" />
+                            ) : (
+                                <HiMoon className="text-neutral-600 dark:text-neutral-300 text-sm" />
+                            )}
+                        </button>
+                        <button
+                            onClick={toggleLanguage}
+                            className="p-1.5 rounded-lg bg-neutral-100/60 dark:bg-neutral-800/60 hover:bg-neutral-200/80 dark:hover:bg-neutral-700/80 transition-all duration-200 ease-out hover:scale-105"
+                            title={language === 'en' ? 'RU' : 'EN'}
+                        >
+                            <HiGlobeAlt className="text-neutral-600 dark:text-neutral-300 text-sm" />
+                        </button>
+                    </div>
+                    <div className="text-neutral-400 dark:text-neutral-500 text-[11px] font-mono">
+                        online
+                    </div>
                 </div>
             </div>
 
@@ -116,33 +138,13 @@ export default function AboutCard() {
                 {t.description}
             </p>
             
-            <div className="grid lg:flex gap-4 md:gap-4 w-full">
+            <div className="flex justify-start">
                 <button
-                    className="flex gap-3 items-center px-6 py-2 ring-2 rounded-xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-md hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[98%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
+                    className="flex gap-3 items-center px-6 py-3 ring-2 rounded-xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-md hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[98%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
                     onClick={() => window.open('https://t.me/tr3ble', '_blank')}
                 >
                     <FaTelegram className="text-neutral-600 dark:text-neutral-300 text-lg" />
                     <p className="font-raleway font-medium text-neutral-600 dark:text-neutral-300">{t.contactMe}</p>
-                </button>
-                <button
-                    className="flex gap-3 items-center px-6 py-2 ring-2 rounded-xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-md hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[98%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
-                    onClick={() => window.toggleTheme()}
-                >
-                    {theme === 'dark' ? (
-                        <HiSun className="text-neutral-600 dark:text-neutral-300 text-lg" />
-                    ) : (
-                        <HiMoon className="text-neutral-600 dark:text-neutral-300 text-lg" />
-                    )}
-                    <p className="font-raleway font-medium text-neutral-600 dark:text-neutral-300">
-                        {theme === 'dark' ? t.lightTheme : t.darkTheme}
-                    </p>
-                </button>
-                <button
-                    onClick={toggleLanguage}
-                    className="flex gap-3 items-center px-6 py-2 ring-2 rounded-xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-md hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[98%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
-                >
-                    <HiGlobeAlt className="text-neutral-600 dark:text-neutral-300 text-lg" />
-                    <p className="font-raleway font-medium text-neutral-600 dark:text-neutral-300">{language === 'en' ? 'RU' : 'EN'}</p>
                 </button>
             </div>
         </div>
