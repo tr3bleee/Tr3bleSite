@@ -7,6 +7,12 @@ export const translations = {
             contactMe: "Contact me",
             darkTheme: "Dark theme",
             lightTheme: "Light theme"
+        },
+        skills: {
+            title: "skills.md",
+            heading: "🚀 Core Stack",
+            description: "Technologies I work with daily",
+            itemsCount: "items"
         }
     },
     ru: {
@@ -17,6 +23,12 @@ export const translations = {
             contactMe: "Связаться",
             darkTheme: "Тёмная тема",
             lightTheme: "Светлая тема"
+        },
+        skills: {
+            title: "навыки.md",
+            heading: "🚀 Основной стек",
+            description: "Технологии, с которыми я работаю ежедневно",
+            itemsCount: "элементов"
         }
     }
 } as const;

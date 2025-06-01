@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function ClientBody({
   children,
@@ -37,7 +37,7 @@ export default function ClientBody({
 
   return (
     <body
-      className={`min-h-screen antialiased ${theme === 'dark' ? 'dark' : ''}`}
+      className={`min-h-screen antialiased bg-neutral-50 dark:bg-neutral-950 ${theme === 'dark' ? 'dark' : ''}`}
       suppressHydrationWarning
     >
       {children}

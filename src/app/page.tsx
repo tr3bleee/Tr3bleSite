@@ -4,8 +4,12 @@ import SkillsCard from "@/components/SkillsCard";
 export default function Home() {
     return (
         <div
-            className="opacity-100 -translate-y-2 scale-[100%] grid place-items-center min-h-screen pt-12 sm:pt-0 gap-20 xl:justify-center px-8 smooth">
-            <div className="w-full max-w-[85rem] mx-auto">
+            className="opacity-100 -translate-y-2 scale-[100%] grid place-items-center min-h-screen pt-12 sm:pt-0 gap-20 xl:justify-center px-8 smooth relative">
+            <div className="absolute inset-0 bg-gradient-radial from-emerald-500/10 via-emerald-300/5 to-transparent blur-3xl"></div>
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400/15 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-emerald-300/10 rounded-full blur-3xl"></div>
+            
+            <div className="w-full max-w-[85rem] mx-auto relative z-10">
                 <div className="grid lg:grid-cols-2 gap-8">
                     <div className="grid items-start gap-8 w-full">
                         <AboutCard/>
