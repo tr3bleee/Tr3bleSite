@@ -70,7 +70,7 @@ export default function AboutCard() {
 
     return (
         <div
-            className="grid gap-6 p-7 md:p-8 items-start rounded-xl ring-2 ring-neutral-300 backdrop-blur-md bg-white/60 dark:bg-neutral-900/60 dark:ring-neutral-600 hover:shadow-lg hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[101%] lg:col-span-3 hover:ring-neutral-400 dark:hover:ring-neutral-500">
+            className="grid gap-5 md:gap-6 p-6 md:p-7 lg:p-8 items-start rounded-xl ring-2 ring-neutral-300 backdrop-blur-md bg-white/60 dark:bg-neutral-900/60 dark:ring-neutral-600 hover:shadow-lg hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[101%] lg:col-span-3 hover:ring-neutral-400 dark:hover:ring-neutral-500">
             
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -84,48 +84,60 @@ export default function AboutCard() {
                         <div className="size-1.5 rounded-full bg-green-400"/>
                     </div>
                 </div>
-                <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 md:gap-3">
+                    <div className="flex items-center gap-1.5 md:gap-2">
                         <button
-                            className="p-1.5 rounded-lg bg-neutral-100/60 dark:bg-neutral-800/60 hover:bg-neutral-200/80 dark:hover:bg-neutral-700/80 transition-all duration-200 ease-out hover:scale-105"
+                            className="p-2 md:p-2.5 lg:p-3 rounded-lg bg-neutral-100/60 dark:bg-neutral-800/60 hover:bg-neutral-200/80 dark:hover:bg-neutral-700/80 transition-all duration-200 ease-out hover:scale-105"
                             onClick={() => window.toggleTheme()}
                             title={theme === 'dark' ? t.lightTheme : t.darkTheme}
                         >
                             {theme === 'dark' ? (
-                                <HiSun className="text-neutral-600 dark:text-neutral-300 text-sm" />
+                                <HiSun className="text-neutral-600 dark:text-neutral-300 text-base md:text-lg" />
                             ) : (
-                                <HiMoon className="text-neutral-600 dark:text-neutral-300 text-sm" />
+                                <HiMoon className="text-neutral-600 dark:text-neutral-300 text-base md:text-lg" />
                             )}
                         </button>
                         <button
                             onClick={toggleLanguage}
-                            className="p-1.5 rounded-lg bg-neutral-100/60 dark:bg-neutral-800/60 hover:bg-neutral-200/80 dark:hover:bg-neutral-700/80 transition-all duration-200 ease-out hover:scale-105"
+                            className="p-2 md:p-2.5 lg:p-3 rounded-lg bg-neutral-100/60 dark:bg-neutral-800/60 hover:bg-neutral-200/80 dark:hover:bg-neutral-700/80 transition-all duration-200 ease-out hover:scale-105"
                             title={language === 'en' ? 'RU' : 'EN'}
                         >
-                            <HiGlobeAlt className="text-neutral-600 dark:text-neutral-300 text-sm" />
+                            <HiGlobeAlt className="text-neutral-600 dark:text-neutral-300 text-base md:text-lg" />
                         </button>
                     </div>
-                    <div className="text-neutral-400 dark:text-neutral-500 text-[11px] font-mono">
+                    <div className="text-neutral-400 dark:text-neutral-500 text-[10px] md:text-[11px] font-mono">
                         online
                     </div>
                 </div>
             </div>
 
-            <div className="grid md:flex gap-6 items-center">
-                <div className="grid gap-5 relative">
-                    <div className="flex items-center gap-4">
+            <div className="grid md:flex gap-5 md:gap-6 items-center">
+                <div className="grid gap-4 md:gap-5 relative">
+                    <div className="flex items-center gap-3 md:gap-4">
                         <Image
                             src="/images/profile.jpg"
                             alt="Profile"
                             width={56}
                             height={56}
-                            className="rounded-full"
+                            className="rounded-full w-12 h-12 md:w-14 md:h-14"
                         />
-                        <h1 className="font-onest text-neutral-700 dark:text-neutral-200 font-semibold text-xl sm:text-2xl">
+                        <h1 className="font-onest text-neutral-700 dark:text-neutral-200 font-semibold text-lg md:text-xl lg:text-2xl">
                             {t.greeting} <span className="gradient-text font-onest">@tr3ble</span>
                         </h1>
                     </div>
-                    <div className="hidden md:flex flex-wrap gap-3">
+                    <div className="flex md:hidden flex-wrap gap-2">
+                        <SkillTag icon={SiTypescript} text="TypeScript"/>
+                        <SkillTag icon={FaReact} text="React"/>
+                        <SkillTag imageSrc={RiNextjsFill} text="Next"/>
+                        <SkillTag imageSrc={RiTailwindCssFill} text="Tailwind"/>
+                    </div>
+                    <div className="hidden md:flex lg:hidden flex-wrap gap-2.5">
+                        <SkillTag icon={SiTypescript} text="TypeScript"/>
+                        <SkillTag icon={FaReact} text="React"/>
+                        <SkillTag imageSrc={RiNextjsFill} text="Next"/>
+                        <SkillTag imageSrc={RiTailwindCssFill} text="Tailwind"/>
+                    </div>
+                    <div className="hidden lg:flex flex-wrap gap-3">
                         <SkillTag icon={SiTypescript} text="TypeScript"/>
                         <SkillTag icon={FaReact} text="React"/>
                         <SkillTag imageSrc={RiNextjsFill} text="Next"/>
@@ -140,11 +152,11 @@ export default function AboutCard() {
             
             <div className="flex justify-start">
                 <button
-                    className="flex gap-3 items-center px-6 py-3 ring-2 rounded-xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-md hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[98%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
+                    className="flex gap-2.5 md:gap-3 items-center px-5 md:px-6 py-2.5 md:py-3 ring-2 rounded-xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-md hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[98%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
                     onClick={() => window.open('https://t.me/tr3ble', '_blank')}
                 >
-                    <FaTelegram className="text-neutral-600 dark:text-neutral-300 text-lg" />
-                    <p className="font-raleway font-medium text-neutral-600 dark:text-neutral-300">{t.contactMe}</p>
+                    <FaTelegram className="text-neutral-600 dark:text-neutral-300 text-base md:text-lg" />
+                    <p className="font-raleway font-medium text-neutral-600 dark:text-neutral-300 text-sm md:text-base">{t.contactMe}</p>
                 </button>
             </div>
         </div>

@@ -21,16 +21,16 @@ function SkillItem({name, status, statusColor, icon: Icon, href}: SkillItemProps
             href={href || ""}
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-5 ring-2 w-full rounded-2xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-lg hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[102%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
+            className="group p-4 md:p-5 ring-2 w-full rounded-2xl bg-neutral-50/50 ring-neutral-300 dark:bg-neutral-900/30 dark:ring-neutral-600 hover:shadow-lg hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out hover:scale-[102%] backdrop-blur-sm hover:ring-neutral-400 dark:hover:ring-neutral-500"
         >
             <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-2xl bg-neutral-100/80 dark:bg-neutral-800/50 group-hover:bg-neutral-200/80 dark:group-hover:bg-neutral-700/60 transition-colors duration-300">
-                        <Icon className="text-neutral-600 dark:text-neutral-300 text-[20px] transition-transform group-hover:scale-110"/>
+                <div className="flex items-center gap-2.5 md:gap-3">
+                    <div className="p-2 md:p-2.5 rounded-2xl bg-neutral-100/80 dark:bg-neutral-800/50 group-hover:bg-neutral-200/80 dark:group-hover:bg-neutral-700/60 transition-colors duration-300">
+                        <Icon className="text-neutral-600 dark:text-neutral-300 text-[18px] md:text-[20px] transition-transform group-hover:scale-110"/>
                     </div>
-                    <p className="font-raleway font-semibold text-neutral-700 dark:text-neutral-200 leading-tight">{name}</p>
+                    <p className="font-raleway font-semibold text-neutral-700 dark:text-neutral-200 leading-tight text-sm md:text-base">{name}</p>
                 </div>
-                <div className="size-2 rounded-full flex-shrink-0" style={{backgroundColor: statusColor}}/>
+                <div className="size-1.5 md:size-2 rounded-full flex-shrink-0" style={{backgroundColor: statusColor}}/>
             </div>
         </Link>
     );
@@ -49,7 +49,7 @@ export default function SkillsCard() {
     return (
         <div
             key={currentLanguage}
-            className="grid gap-7 p-8 items-start rounded-2xl ring-2 ring-neutral-300 backdrop-blur-md bg-white/60 dark:bg-neutral-900/60 dark:ring-neutral-600 hover:shadow-lg hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out group hover:ring-neutral-400 dark:hover:ring-neutral-500"
+            className="grid gap-6 md:gap-7 p-6 md:p-7 lg:p-8 items-start rounded-2xl ring-2 ring-neutral-300 backdrop-blur-md bg-white/60 dark:bg-neutral-900/60 dark:ring-neutral-600 hover:shadow-lg hover:shadow-neutral-200/20 dark:hover:shadow-neutral-900/30 transition-all duration-300 ease-out group hover:ring-neutral-400 dark:hover:ring-neutral-500"
         >
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -69,11 +69,11 @@ export default function SkillsCard() {
             </div>
 
             <div>
-                <h1 className="font-raleway text-neutral-700 dark:text-neutral-200 font-bold text-2xl mb-2">{t.heading}</h1>
+                <h1 className="font-raleway text-neutral-700 dark:text-neutral-200 font-bold text-xl md:text-2xl mb-2">{t.heading}</h1>
                 <p className="font-raleway text-neutral-500 dark:text-neutral-400 text-sm">{t.description}</p>
             </div>
             
-            <div className="grid gap-5 lg:grid-cols-3 w-full">
+            <div className="grid gap-4 md:gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full">
                 <SkillItem name="TypeScript" status="" statusColor="#10b981" icon={SiTypescript}
                            href="https://www.typescriptlang.org/"/>
                 <SkillItem name="Next.js" status="" statusColor="#10b981" icon={SiNextJs}
