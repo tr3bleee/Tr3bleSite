@@ -1,0 +1,44 @@
+{
+    "name": "Tr3ble - Full-Stack TypeScript Developer Portfolio",
+    "short_name": "Tr3ble Portfolio",
+    "description": "Professional portfolio of Tr3ble - Full-stack TypeScript developer specializing in React, Next.js, Node.js and modern web development",
+    "lang": "en",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#10b981",
+    "background_color": "#ffffff",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "id": "tr3ble-portfolio",
+    "categories": ["productivity", "developer", "portfolio"],
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "View Skills",
+            "short_name": "Skills",
+            "description": "View technical skills and expertise",
+            "url": "/#skills"
+        },
+        {
+            "name": "Contact",
+            "short_name": "Contact", 
+            "description": "Get in touch via Telegram",
+            "url": "https://t.me/tr3ble"
+        }
+    ],
+    "edge_side_panel": {
+        "preferred_width": 400
+    },
+    "handle_links": "preferred",
+    "launch_handler": {
+        "client_mode": "navigate-existing"
+    },
+    "related_applications": [],
+    "prefer_related_applications": false
+}

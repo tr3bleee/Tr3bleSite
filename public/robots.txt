@@ -1,0 +1,60 @@
+# Robots.txt for Tr3ble Portfolio
+# https://tr3ble.tech/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tr3ble.tech/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# Disallow common admin/system paths (none in this case)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow images and assets
+User-agent: *
+Allow: /images/
+Allow: /icons/
+Allow: /fonts/
+Allow: /_next/static/
+Allow: /favicon.ico
+
+# Host directive (optional, for preference)
+Host: https://tr3ble.tech
