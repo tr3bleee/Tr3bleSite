@@ -1,6 +1,8 @@
-import type {Metadata} from "next";
-import "./globals.css";
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import type { Metadata } from "next";
 import ClientBody from "./ClientBody";
+import "./globals.css";
 
 export const metadata: Metadata = {
     title: "Portfolio • @tr3ble",
@@ -15,6 +17,8 @@ export default function RootLayout({
     return (
         <html lang="en">
         <ClientBody>{children}</ClientBody>
+        <SpeedInsights />
+        <Analytics />
         </html>
     );
 }
