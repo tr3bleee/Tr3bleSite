@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: "Tr3ble - Full-Stack TypeScript Developer Portfolio",
-        description: "17-year-old full-stack developer specializing in TypeScript, React, and Node.js. View projects and technical expertise.",
+        description: "17-year-old full-stack developer specializing in TypeScript, React, and Node.js. View technical expertise.",
         type: 'website',
         url: 'https://tr3ble.tech',
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Tr3ble - Full-Stack TypeScript Developer Portfolio',
-        description: '17-year-old full-stack developer specializing in TypeScript, React, and Node.js. View projects and technical expertise.',
+        description: '17-year-old full-stack developer specializing in TypeScript, React, and Node.js. View technical expertise.',
     },
     alternates: {
         canonical: 'https://tr3ble.tech',
@@ -36,25 +36,22 @@ export const metadata: Metadata = {
 export default function Home() {
     return (
         <>
-            {/* Skip to main content for accessibility */}
             <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-emerald-600 text-white px-4 py-2 rounded-md z-50">
                 Skip to main content
             </a>
             
             <main 
                 id="main-content"
-                className="opacity-100 -translate-y-2 scale-[100%] grid place-items-center min-h-screen pt-8 sm:pt-12 md:pt-16 lg:pt-0 gap-12 md:gap-16 lg:gap-20 xl:justify-center px-4 sm:px-6 md:px-8 smooth relative"
+                className="opacity-100 -translate-y-2 scale-[100%] grid place-items-center min-h-screen pt-8 sm:pt-12 md:pt-16 lg:pt-0 pb-20 sm:pb-24 gap-12 md:gap-16 lg:gap-20 xl:justify-center px-4 sm:px-6 md:px-8 smooth relative"
                 role="main"
                 aria-label="Portfolio homepage showcasing Tr3ble's development skills and experience"
             >
-                {/* Background decorative elements */}
                 <div className="absolute inset-0 bg-gradient-radial from-emerald-500/10 via-emerald-300/5 to-transparent blur-3xl" aria-hidden="true"></div>
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-400/15 rounded-full blur-3xl" aria-hidden="true"></div>
                 <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-emerald-300/10 rounded-full blur-3xl" aria-hidden="true"></div>
                 
                 <div className="w-full max-w-[85rem] mx-auto relative z-10">
                     <div className="grid lg:grid-cols-1 xl:grid-cols-2 gap-6 md:gap-8">
-                        {/* About section */}
                         <section 
                             className="grid items-start gap-6 md:gap-8 w-full"
                             aria-labelledby="about-heading"
@@ -65,7 +62,6 @@ export default function Home() {
                             <AboutCard/>
                         </section>
                         
-                        {/* Skills section */}
                         <section 
                             className="grid items-stretch gap-6 md:gap-8"
                             aria-labelledby="skills-heading"
@@ -79,7 +75,6 @@ export default function Home() {
                 </div>
             </main>
             
-            {/* Structured data for current page */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{

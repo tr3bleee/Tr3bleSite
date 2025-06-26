@@ -84,6 +84,14 @@ export const metadata: Metadata = {
             'max-snippet': -1,
         },
     },
+    icons: {
+        icon: [
+            { url: '/images/omg.jpg', sizes: '32x32', type: 'image/jpeg' },
+            { url: '/images/omg.jpg', sizes: '16x16', type: 'image/jpeg' },
+        ],
+        shortcut: '/images/omg.jpg',
+        apple: '/images/omg.jpg',
+    },
     manifest: '/site.webmanifest',
     category: 'technology',
     classification: 'Software Development Portfolio',
@@ -95,8 +103,8 @@ export const metadata: Metadata = {
     },
     applicationName: 'Tr3ble Portfolio',
     generator: 'Next.js',
-    abstract: 'Portfolio website showcasing full-stack TypeScript development skills and projects',
-    archives: ['https://tr3ble.dev/projects'],
+    abstract: 'Portfolio website showcasing full-stack TypeScript development skills',
+    archives: ['https://tr3ble.dev'],
     assets: ['https://tr3ble.dev/assets'],
     bookmarks: ['https://tr3ble.dev/bookmarks'],
     other: {
@@ -112,7 +120,7 @@ export const metadata: Metadata = {
         'msapplication-starturl': '/',
         'msapplication-navbutton-color': '#10b981',
         'msapplication-window': 'width=1024;height=768',
-        'msapplication-task': 'name=Portfolio;action-uri=/;icon-uri=/favicon.ico',
+        'msapplication-task': 'name=Portfolio;action-uri=/;icon-uri=/images/omg.jpg',
     },
 };
 

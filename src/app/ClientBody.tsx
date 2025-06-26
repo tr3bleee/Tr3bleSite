@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import WebringNav from "@/components/WebringNav";
 
 export default function ClientBody({
   children,
@@ -41,6 +42,7 @@ export default function ClientBody({
       suppressHydrationWarning
     >
       {children}
+      <WebringNav />
     </body>
   );
 }
